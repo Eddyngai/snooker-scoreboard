@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斯?克?分板</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>斯?克?分板</h1>
+        <div class="players">
+            <input type="text" id="playerLeft" placeholder="左方?手名字">
+            <input type="text" id="playerRight" placeholder="右方?手名字">
+        </div>
+        <div class="scoreboard">
+            <div id="leftScore">0</div>
+            <div id="rightScore">0</div>
+        </div>
+        <div class="buttons">
+            <button onclick="addScore('left', 1)">?球 (1分)</button>
+            <button onclick="addScore('left', 2)">?球 (2分)</button>
+            <button onclick="addScore('left', 3)">?球 (3分)</button>
+            <button onclick="addScore('left', 4)">棕球 (4分)</button>
+            <button onclick="addScore('left', 5)">?球 (5分)</button>
+            <button onclick="addScore('left', 6)">粉球 (6分)</button>
+            <button onclick="addScore('left', 7)">黑球 (7分)</button>
+            <button onclick="foul('right', 4)">左方犯? (4分)</button>
+            <button onclick="foul('left', 4)">右方犯? (4分)</button>
+            <button onclick="reset()">重置</button>
+        </div>
+        <div class="history">
+            <h2>得分?史</h2>
+            <ul id="scoreHistory"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
