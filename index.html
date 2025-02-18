@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>斯?克?分板</title>
+    <title>Snooker Scoreboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>斯?克?分板</h1>
+        <h1>Snooker Scoreboard</h1>
         <div class="players">
-            <input type="text" id="playerLeft" placeholder="Player 1 名字">
-            <input type="text" id="playerRight" placeholder="Player 2 名字">
-            <button onclick="startGame()">?始游?</button>
+            <input type="text" id="playerLeft" placeholder="Player 1 Name">
+            <input type="text" id="playerRight" placeholder="Player 2 Name">
+            <button onclick="startGame()">Start Game</button>
         </div>
         <div class="scoreboard">
             <div id="leftScore">0</div>
             <div id="rightScore">0</div>
         </div>
         <div class="buttons">
-            <button onclick="addScore('left', 1)">?球 (1分)</button>
-            <button onclick="addScore('left', 2)">?球 (2分)</button>
-            <button onclick="addScore('left', 3)">?球 (3分)</button>
-            <button onclick="addScore('left', 4)">棕球 (4分)</button>
-            <button onclick="addScore('left', 5)">?球 (5分)</button>
-            <button onclick="addScore('left', 6)">粉球 (6分)</button>
-            <button onclick="addScore('left', 7)">黑球 (7分)</button>
-            <button onclick="foul('right', 4)">Player 1 犯? (4分)</button>
-            <button onclick="foul('left', 4)">Player 2 犯? (4分)</button>
-            <button onclick="reset()">重置</button>
+            <button onclick="addScore('left', 1)">Red Ball (1pt)</button>
+            <button onclick="addScore('left', 2)">Yellow Ball (2pt)</button>
+            <button onclick="addScore('left', 3)">Green Ball (3pt)</button>
+            <button onclick="addScore('left', 4)">Brown Ball (4pt)</button>
+            <button onclick="addScore('left', 5)">Blue Ball (5pt)</button>
+            <button onclick="addScore('left', 6)">Pink Ball (6pt)</button>
+            <button onclick="addScore('left', 7)">Black Ball (7pt)</button>
+            <button onclick="foul('right', 4)">Player 1 Foul (4pt)</button>
+            <button onclick="foul('left', 4)">Player 2 Foul (4pt)</button>
+            <button onclick="reset()">Reset</button>
         </div>
         <div class="history">
-            <h2>得分?史</h2>
+            <h2>Score History</h2>
             <ul id="scoreHistory"></ul>
         </div>
     </div>

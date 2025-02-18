@@ -1,33 +1,30 @@
 let leftScore = 0;
 let rightScore = 0;
 let scoreHistory = [];
-let gameStarted = false; // ノ?琩村?琌?﹍
+let gameStarted = false;
 
 function startGame() {
     const playerLeftName = document.getElementById('playerLeft').value;
     const playerRightName = document.getElementById('playerRight').value;
 
     if (!playerLeftName || !playerRightName) {
-        alert('????も');
+        alert('Please enter names for both players!');
         return;
     }
 
-    // ﹍てだ?㎝???
     leftScore = 0;
     rightScore = 0;
     scoreHistory = [];
     document.getElementById('scoreHistory').innerHTML = '';
     updateScoreboard();
 
-    // ??村??﹍
     gameStarted = true;
-
-    alert(`ゑ??﹍\nPlayer 1${playerLeftName}\nPlayer 2${playerRightName}`);
+    alert(`Game Started!\nPlayer 1: ${playerLeftName}\nPlayer 2: ${playerRightName}`);
 }
 
 function addScore(player, points) {
     if (!gameStarted) {
-        alert('???¨?﹍村?〃');
+        alert('Please start the game first!');
         return;
     }
 
@@ -42,7 +39,7 @@ function addScore(player, points) {
 
 function foul(player, points) {
     if (!gameStarted) {
-        alert('???¨?﹍村?〃');
+        alert('Please start the game first!');
         return;
     }
 
@@ -72,6 +69,6 @@ function updateScoreboard() {
 function addHistory(player, points, isFoul = false) {
     const playerName = document.getElementById(`player${player.charAt(0).toUpperCase() + player.slice(1)}`).value || player;
     const historyItem = document.createElement('li');
-    historyItem.innerText = `${playerName} ${isFoul ? 'デ?' : '眔だ'} ${points}だ`;
+    historyItem.innerText = `${playerName} ${isFoul ? 'Foul' : 'Scored'} ${points}pt`;
     document.getElementById('scoreHistory').appendChild(historyItem);
 }
